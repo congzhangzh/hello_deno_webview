@@ -1,0 +1,35 @@
+{
+  "tasks": {
+    "start": "deno run -A main.ts",
+    "dev": "deno run --watch -A main.ts",
+    "test": "deno test",
+    "lint": "deno lint",
+    "fmt": "deno fmt",
+    "compile": "deno compile -A --output=out/app main.ts",
+    "bundle": "deno bundle main.ts out/bundle.js"
+  },
+  "compilerOptions": {
+    "lib": ["deno.window"],
+    "strict": true
+  },
+  "lint": {
+    "files": {
+      "include": ["src/"]
+    },
+    "rules": {
+      "tags": ["recommended"]
+    }
+  },
+  "fmt": {
+    "files": {
+      "include": ["src/"]
+    },
+    "options": {
+      "useTabs": false,
+      "lineWidth": 80,
+      "indentWidth": 2,
+      "singleQuote": true,
+      "proseWrap": "always"
+    }
+  }
+}
